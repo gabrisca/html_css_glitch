@@ -1,2 +1,2 @@
 # html_css_glitch
-![alt text](http://url/to/nosignal.jpg)
+https://github.com/gabrisca/html_css_glitch/blob/master/nosignal.jpg
