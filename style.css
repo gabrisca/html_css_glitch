@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.my_glitch {
+  height: 100vh;
+  background-color: black;
+}
+
+.img {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(nosignal.jpg);
+}
+
+.img::before,
+.img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 300px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img::before {
+  left: -6px;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+  background-image: url(glitch2.jpg);
+}
+.img::after {
+  left: 6px;
+  animation: glitch-effect 4s infinite linear alternate-reverse;
+  background-image: url(glitch3.jpg);
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(217px, 400px, 293px, 0);
+  }
+  5.8823529412% {
+    clip: rect(109px, 400px, 160px, 0);
+  }
+  11.7647058824% {
+    clip: rect(286px, 400px, 3px, 0);
+  }
+  17.6470588235% {
+    clip: rect(185px, 400px, 238px, 0);
+  }
+  23.5294117647% {
+    clip: rect(85px, 400px, 85px, 0);
+  }
+  29.4117647059% {
+    clip: rect(142px, 400px, 95px, 0);
+  }
+  35.2941176471% {
+    clip: rect(221px, 400px, 207px, 0);
+  }
+  41.1764705882% {
+    clip: rect(114px, 400px, 232px, 0);
+  }
+  47.0588235294% {
+    clip: rect(129px, 400px, 96px, 0);
+  }
+  52.9411764706% {
+    clip: rect(154px, 400px, 110px, 0);
+  }
+  58.8235294118% {
+    clip: rect(85px, 400px, 215px, 0);
+  }
+  64.7058823529% {
+    clip: rect(73px, 400px, 218px, 0);
+  }
+  70.5882352941% {
+    clip: rect(237px, 400px, 125px, 0);
+  }
+  76.4705882353% {
+    clip: rect(57px, 400px, 280px, 0);
+  }
+  82.3529411765% {
+    clip: rect(195px, 400px, 179px, 0);
+  }
+  88.2352941176% {
+    clip: rect(64px, 400px, 212px, 0);
+  }
+  94.1176470588% {
+    clip: rect(45px, 400px, 162px, 0);
+  }
+  100% {
+    clip: rect(45px, 400px, 188px, 0);
+  }
+}
+
